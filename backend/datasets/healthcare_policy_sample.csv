@@ -1,0 +1,5 @@
+hospital_name,state,measure_name,score
+general hospital,CA,Readmission Rate,15.2
+city medical center,NY,Patient Satisfaction,82
+rural health clinic,TX,Infection Rate,2.1
+metro hospital,FL,Readmission Rate,13.8

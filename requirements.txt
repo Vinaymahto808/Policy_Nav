@@ -1,0 +1,10 @@
+fastapi
+streamlit
+watchdog
+uvicorn
+PyMuPDF
+spacy
+pytesseract
+pdf2image
+Pillow
+opencv-python-headless
