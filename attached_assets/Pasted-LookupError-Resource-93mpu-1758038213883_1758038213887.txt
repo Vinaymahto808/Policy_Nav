@@ -1,0 +1,37 @@
+LookupError: ********************************************************************** Resource [93mpunkt_tab[0m not found. Please use the NLTK Downloader to obtain the resource: [31m>>> import nltk >>> nltk.download('punkt_tab') [0m For more information see: https://www.nltk.org/data.html Attempted to load [93mtokenizers/punkt_tab/english/[0m Searched in: - '/home/runner/nltk_data' - '/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/nltk_data' - '/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/share/nltk_data' - '/nix/store/7d088dip86hlzri9sk0h78b63yfmx0a0-python3-3.11.13/lib/nltk_data' - '/usr/share/nltk_data' - '/usr/local/share/nltk_data' - '/usr/lib/nltk_data' - '/usr/local/lib/nltk_data' **********************************************************************
+Traceback:
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 669, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/runner/workspace/app.py", line 346, in <module>
+    main()
+File "/home/runner/workspace/app.py", line 60, in main
+    chat_with_file_llm(extracted_text)
+File "/home/runner/workspace/app.py", line 223, in chat_with_file_llm
+    chunks = chunker.chunk_by_sentences(extracted_text)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/runner/workspace/backend/text_processor.py", line 97, in chunk_by_sentences
+    return self._fallback_chunk(text)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/runner/workspace/backend/text_processor.py", line 176, in _fallback_chunk
+    'word_count': len(word_tokenize(chunk_text)),
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/nltk/tokenize/__init__.py", line 142, in word_tokenize
+    sentences = [text] if preserve_line else sent_tokenize(text, language)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/nltk/tokenize/__init__.py", line 119, in sent_tokenize
+    tokenizer = _get_punkt_tokenizer(language)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/nltk/tokenize/__init__.py", line 105, in _get_punkt_tokenizer
+    return PunktTokenizer(language)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1744, in __init__
+    self.load_lang(lang)
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/nltk/tokenize/punkt.py", line 1749, in load_lang
+    lang_dir = find(f"tokenizers/punkt_tab/{lang}/")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/nltk/data.py", line 579, in find
+    raise LookupError(resource_not_found)
