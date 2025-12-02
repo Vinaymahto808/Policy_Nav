@@ -26,8 +26,9 @@ st.markdown("""
     text-align: center;
     padding: 1rem;
     margin-bottom: 2rem;
+    border-radius: 10px;
     background-color: #F8EFBA; 
-    radius: 10px:
+
 }
 .status-box {
     padding: 0.5rem;
@@ -35,7 +36,7 @@ st.markdown("""
     margin: 0.5rem 0;
 }
 .success {
-    background-color: #d4edda;
+    background-color: #55E6C1;
     border: 1px solid #c3e6cb;
     color: #155724;
 }
