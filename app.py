@@ -26,7 +26,7 @@ st.markdown("""
     text-align: center;
     padding: 1rem;
     margin-bottom: 2rem;
-    background-color: 
+    background-color: #F8EFBA; 
 }
 .status-box {
     padding: 0.5rem;
